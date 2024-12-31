@@ -8,6 +8,8 @@ try {
   
   const output = await splitter.createDocuments([text])
   console.log(output)
+  
+  await fs.writeFile('output.md', JSON.stringify(output, null, 2))
 } catch (err) {
   console.log(err)
 }
